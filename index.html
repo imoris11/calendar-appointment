@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-framework="javascript">
+	<head>
+		<meta charset="utf-8">
+		<title>Calendar App</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/calendar.css">
+	</head>
+	<body>
+    <main>
+      <div class='col-md-12'>
+        <div class='col-md-8 offset-md-2' id="appointments_containter">
+          <h3 class='text-info text-center'>
+            Calendar
+          </h3>
+          <div>
+            <ul class="weekdays">
+              <li>Mo</li>
+              <li>Tu</li>
+              <li>We</li>
+              <li>Th</li>
+              <li>Fr</li>
+              <li>Sa</li>
+              <li>Su</li>
+            </ul>
+
+            <ul class="days" id="calendar">
+            </ul>
+          </div>
+        </div>
+        <div class='col-md-6 offset-md-3 card' id="appointments_containter" >
+          <div>
+            <h3 class='text-info text-center' id="appointments_title"></h3>
+            <div >
+              <div class='appointments text-center'>
+                <div class='appointment'>
+                </div>
+                <div id="form" class="form-group">
+                  <textarea rows="5" class='form-control' id="appointment_info" placeholder="Enter appointment information" ></textarea>
+                  <br />
+                  <p id="error_message" class="text-danger text-center"></p>
+                  <button onclick="submitForm()" class='btn btn-success'>Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+		<script src="js/calendar.js"></script>
+	</body>
+</html>
